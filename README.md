@@ -1,14 +1,17 @@
 # UPBGE (0.36.1) - control game objects using OSC messages (SB Version)
 
-This project is based on a study form Jose Padovani
-Look at https://github.com/zepadovani/upbge_osc_gamemode
+This project is based on a great study by Jose Padovani.
+Take a look at https://github.com/zepadovani/upbge_osc_gamemode
 
-## Author: Sandro Benigno
-This one here has few improvements and new resourses:
+#### Author: Sandro Benigno
+This version has few improvements and a new feature:
+
 Improvement:
+
 /move and /rotate commands are object agnostic, you can now send the obj_name in the OSC message
 
-New resource:
+New feature:
+
 /play executes an action of a given obj extracting it's animation start_frame and end_frame automaticaly
 
 1. Download this repository:
