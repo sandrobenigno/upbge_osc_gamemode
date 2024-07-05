@@ -12,7 +12,7 @@ Improvement:
 
 New feature:
 
-/play executes an action of a given obj extracting it's animation start_frame and end_frame automaticaly
+/play executes an action of a given object, extracting its animation's start_frame and end_frame automatically.
 
 1. Download this repository:
 ```
