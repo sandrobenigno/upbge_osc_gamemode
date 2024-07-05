@@ -12,7 +12,7 @@ The commands **/move** and **/rotate** are object agnostic, you can now send the
 
 New feature:
 
-The command **/play** executes an action of a given object, extracting its animation's start_frame and end_frame automatically.
+The command **/play** executes an action of a given object, extracting its animation's **start_frame** and **end_frame** automatically.
 
 1. Download this repository:
 ```
