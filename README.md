@@ -28,6 +28,6 @@ pip install --target ./ python-osc
 
 3. Run the game (press 'p' to play the embedded game or select the standalone version in render options)
 
-4. Run the SuperCollider code to send messages to move, rotate and play actions of the objects by name
+4. Run the SuperCollider code or the PureData sketch to send messages to move, rotate and play actions of the objects by name
 
-5. Run the /quit message to end the server, close the port and exit the game
+5. On both environiments, run the /quit message to end the server, close the port and exit the game
