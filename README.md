@@ -8,11 +8,11 @@ This version has few improvements and a new feature:
 
 Improvement:
 
-/move and /rotate commands are object agnostic, you can now send the obj_name in the OSC message
+The commands **/move** and **/rotate** are object agnostic, you can now send the obj_name in the OSC message
 
 New feature:
 
-/play executes an action of a given object, extracting its animation's start_frame and end_frame automatically.
+The command **/play** executes an action of a given object, extracting its animation's start_frame and end_frame automatically.
 
 1. Download this repository:
 ```
