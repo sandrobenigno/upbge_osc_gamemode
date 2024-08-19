@@ -74,6 +74,23 @@ def play_action(unused_addr, obj_name, anim_name):
     else:
         print(f"Object '{obj_name}' not found.")
 
+def set_shape_key_value(unused_addr, obj_name, shape_key_name, value):
+    if not (0.0 <= value <= 1.0):
+        raise ValueError("O valor deve estar entre 0 e 1")
+
+    obj = bpy.data.objects.get(obj_name)
+    if obj is None:
+        raise ValueError(f"Objeto '{obj_name}' não encontrado")
+
+    if not obj.data.shape_keys:
+        raise ValueError(f"Objeto '{obj_name}' não possui shape keys")
+
+    key_block = obj.data.shape_keys.key_blocks.get(shape_key_name)
+    if key_block is None:
+        raise ValueError(f"Shape key '{shape_key_name}' não encontrada no objeto '{obj_name}'")
+
+    key_block.value = value
+
 def quit(unused_addr, *args):
     global should_run
     should_run = False  # Stop the server loop
@@ -114,6 +131,7 @@ dispatcher = Dispatcher()
 dispatcher.map("/move", move)      
 dispatcher.map("/rotate", rotate)   
 dispatcher.map("/play", play_action)
+dispatcher.map("/morph", set_shape_key_value)
 dispatcher.map("/quit", quit)
 
 # Start the game loop
